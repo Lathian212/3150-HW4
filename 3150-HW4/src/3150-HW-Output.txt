@@ -1,0 +1,25 @@
+/* I believe the way I implement MyString class protects the private char array from exposure
+* in the way you showed in classed. Check it out and let me know. That was an excellent point
+* you made that all this private public stuff is just JVM protection and you can leave truly
+* private stuff expose by returning a reference to it making something that is supposed to be
+* immutable, mutable.
+*/
+
+Calling MyString constructor with a - g char array (10 characters). 
+myStObj0.charAt(i) to print out MyString
+a b c d e f g h i g 
+myStObj0.length()
+10
+MyString mySubobj0 = myStObj0.substring(0, 5)
+mySubObj0.charAt(i) to print out substring
+a b c d e 
+System.out.println(myStObj0.toUpperCase())
+ABCDEFGHIG
+System.out.println((myStObj0.toUpperCase()).toLowerCase())
+abcdefghig
+char [] startChar10b = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'g' }; +MyString myStObj1 = new MyString(startChar10b);
+myStObj0.equals(myStObj1) = true
+myStObj0.equals(myStObj1.toUpperCase()) = false
+myStObj0.getMyString() = abcdefghig
+String realString = myStObj0.toString(); System.out.println(realString) = abcdefghig
+MyString intMyString = MyString.valueOf(5378); System.out.println(intMyString) = 5378
